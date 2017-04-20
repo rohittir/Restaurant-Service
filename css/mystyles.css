@@ -65,5 +65,132 @@ body{
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-    padding:10px; 
+    padding:10px;
+}
+
+.border {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+
+.bg,
+.overlay {
+  text-align: center;
+}
+
+img,
+.overlay {
+  transition: .3s all;
+}
+
+.bg {
+  float: left;
+  max-width: 31%;
+  position: relative;
+  margin: .5%;
+}
+.bg img {
+  max-width: 100%;
+  margin-bottom: -4px;
+  border-radius: 3px;
+}
+.bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  color: #1abf6a;
+  opacity: 0;
+}
+.bg .overlay h2 {
+  margin-top: 5%;
+  font-family: 'Droid Serif', serif;
+}
+.bg .overlay h2 span {
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: 700;
+}
+.bg .overlay p {
+  font-family: 'Julius Sans One', sans-serif;
+}
+.bg:hover .overlay {
+  opacity: 1;
+}
+.bg:hover img {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+@media screen and (max-width: 1148px) {
+  .bg {
+    max-width: 48%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bg {
+    float: none;
+    max-width: 60%;
+    margin: .5% auto;
+  }
+}
+
+.tableFont{
+    font-size: 0.8em;
+    color: white;
+
+}
+
+/*jackson restaurant*/
+body {
+  position: relative;
+}
+
+ul.nav-pills {
+  top: 20px;
+  position: fixed;
+}
+
+div.col-sm-9 div {
+  height: 250px;
+  font-size: 28px;
+}
+
+#section1 {
+  color: #fff;
+  background-color: #1E88E5;
+}
+
+#section2 {
+  color: #fff;
+  background-color: #673ab7;
+}
+
+#section3 {
+  color: #fff;
+  background-color: #ff9800;
+}
+
+#section4 {
+  color: #fff;
+  background-color: #00bcd4;
+}
+
+#section5 {
+  color: #fff;
+  background-color: #009688;
+}
+
+@media screen and (max-width: 810px) {
+  #section1, #section2, #section3, #section4, #section5 {
+    margin-left: 150px;
+  }
 }
