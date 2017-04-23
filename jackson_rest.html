@@ -21,8 +21,9 @@
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
 
 <div class="container">
+
   <div class="row">
-    <nav class="col-sm-3" id="myScrollspy">
+    <nav class="col-sm-2" id="myScrollspy">
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Appetizers</a></li>
         <li><a href="#section2">Main Course</a></li>
@@ -38,37 +39,208 @@
         </li>-->
       </ul>
     </nav>
-    <div class="col-sm-9">
+
+
+    <div class="col-sm-7">
       <div id="section1">
-        <div class="bg">
+        <div class="food">
         <a href="">
         <img src="./img/app/buns.jpg" alt="">
         </a>
         </div>
-        <div class="bg">
+        <div class="food">
         <a href="">
         <img src="./img/app/calamari.jpeg" alt="">
         </a>
         </div>
+        <div class="food">
+        <a href="">
+        <img src="./img/app/artichoke-spinach-dip-134.jpg" alt="">
+        </a>
+        </div>
+        <div class="food">
+        <a href="">
+        <img src="./img/app/crunchy-shrimp-sushi.jpg" alt="">
+        </a>
+        </div>
+        <div class="food">
+        <a href="">
+        <img src="./img/app/deviled-eggs.jpg" alt="">
+        </a>
+        </div>
+        <div class="food">
+        <a href="">
+        <img src="./img/app/firecracker-sushi.jpg" alt="">
+        </a>
+        </div>
+        <div class="food">
+        <a href="">
+        <img src="./img/app/Skillet-Macaroni-and-Cheese-1.jpg" alt="">
+        </a>
+        </div>
+        <div class="food">
+        <a href="">
+        <img src="./img/app/spicy-tuna-roll-sushi.jpg" alt="">
+        </a>
+        </div>
       </div>
+      <br/>
       <div id="section2">
-        <h1>Section 2</h1>
-        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+
       </div>
       <div id="section3">
-        <h1>Section 3</h1>
-        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+
       </div>
       <div id="section4">
-        <h1>Section 4-1</h1>
-        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+
       </div>
       <div id="section5">
-        <h1>Section 4-2</h1>
-        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+
       </div>
     </div>
+
+<!--Shopping bag-->
+
+    <div class="col-sm-3">
+      <div class="shopping-cart">
+      <!-- Title -->
+      <div class="title">
+        Shopping Bag
+      </div>
+
+      <!-- Product #1 -->
+      <div class="item">
+        <div class="buttons">
+          <!--<span class="delete-btn"></span>
+          <span class="like-btn"></span>-->
+          <img class="delete-btn" src="./img/cart/delete-icn.svg" alt="" />
+        </div>
+
+        <div class="image">
+          <img src="./img/cart/item-1.jpg" alt="" />
+        </div>
+
+        <div class="description">
+          <span>Buns</span>
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="./img/cart/plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value="1">
+          <button class="minus-btn" type="button" name="button">
+            <img src="./img/cart/minus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="total-price">$16</div>
+      </div>
+
+      <!-- Product #2 -->
+      <div class="item">
+        <div class="buttons">
+          <!--<span class="delete-btn"></span>
+          <span class="like-btn"></span>-->
+          <img class="delete-btn" src="./img/cart/delete-icn.svg" alt="" />
+        </div>
+
+        <div class="image">
+          <img src="./img/cart/item-2.jpeg" alt=""/>
+        </div>
+
+        <div class="description">
+          <span>Calamari</span>
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="./img/cart/plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value="1">
+          <button class="minus-btn" type="button" name="button">
+            <img src="./img/cart/minus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="total-price">$24</div>
+      </div>
+
+      <!-- Product #3 -->
+      <div class="item">
+        <div class="buttons">
+          <!--<span class="delete-btn"></span>-->
+          <img class="delete-btn" src="./img/cart/delete-icn.svg" alt="" />
+          <!--<span class="like-btn"></span>-->
+        </div>
+
+        <div class="image">
+          <img src="./img/cart/item-3.jpg" alt="" />
+        </div>
+
+        <div class="description">
+          <span>Deviled Eggs</span>
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="./img/cart/plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value="1">
+          <button class="minus-btn" type="button" name="button">
+            <img src="./img/cart/minus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="total-price">$6</div>
+      </div>
+    </div>
+    </div>
+
   </div>
 </div>
 
+
+
+
+
 </body>
+
+<script type="text/javascript">
+
+$('.like-btn').on('click', function() {
+   $(this).toggleClass('is-active');
+});
+
+$('.minus-btn').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $input = $this.closest('div').find('input');
+    var value = parseInt($input.val());
+
+    if (value &gt; 1) {
+        value = value - 1;
+    } else {
+        value = 0;
+    }
+
+  $input.val(value);
+
+});
+
+$('.plus-btn').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $input = $this.closest('div').find('input');
+    var value = parseInt($input.val());
+
+    if (value &lt; 100) {
+        value = value + 1;
+    } else {
+        value =100;
+    }
+
+    $input.val(value);
+});
+
+</script>
