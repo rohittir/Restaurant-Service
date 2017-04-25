@@ -13,10 +13,19 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap-social.css" rel="stylesheet">
     <link href="css/mystyles.css" rel="stylesheet">
+    <link href="css/restaurant.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
+
+<div class="container-fluid" style="background-color:#2196F3;color:#fff;height:200px;">
+  <h1>Bootstrap Affix Example</h1>
+  <h3>Fixed (sticky) vertical sidenav on scroll</h3>
+  <p>Scroll this page to see how the left navigation menu behaves with data-spy="affix".</p>
+  <p><strong>The left menu sticks to the page when you have scrolled a specified amount of pixels.</strong></p>
+</div>
+<br>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
 
@@ -24,7 +33,7 @@
 
   <div class="row">
     <nav class="col-sm-2" id="myScrollspy">
-      <ul class="nav nav-pills nav-stacked">
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
         <li class="active"><a href="#section1">Appetizers</a></li>
         <li><a href="#section2">Main Course</a></li>
         <li><a href="#section3">Desserts</a></li>
@@ -43,59 +52,349 @@
 
     <div class="col-sm-7">
       <div id="section1">
-        <div class="food">
-        <a href="">
-        <img src="./img/app/buns.jpg" alt="">
-        </a>
-        </div>
-        <div class="food">
+
+        <span class="food">
+          <div id="f1_container1" class="flip-container">
+              <div id="f1_card">
+                <div class="front face" onclick="clickFrontImage('#f1_container1')">
+                  <img src="./img/app/buns.jpg">
+                  <div class="overlay">
+                    <span class="food_title"> Best Buns Lemon Blueberry Muffin or Sticky Bun </span>
+                      <a class="btn btn-success btn-med addFoodButton" onclick="clickAdd('#f1_container1')">
+                        <span>$2</span>
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                      </a>
+                  </div>
+                </div>
+                <div class="back face center" onclick="clickBackImage('#f1_container1')">
+                  <a class="btn btn-success btn-med addFoodButton">
+                        <span>$2</span>
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                      </a>
+                  <!--<span class="backtext">Lemon Blueberry Muffin or Sticky Bun </span>-->
+                  <div class="well" style="background-color:yellow; color: black; font-size: 15px; height:100px;">
+                      A small sweet hand sized bread roll made out of flour, yeast milk and butter.
+                  </div>
+                  <table class="table" style="font-size:10px;color:black">
+                    <thead>
+                      <tr>
+                        <th>Calories</th>
+                        <th>Protien(g)</th>
+                        <th>Fat(g)</th>
+                        <th>Sodium(g)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>345</td>
+                        <td>10</td>
+                        <td>15</td>
+                        <td>890</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </span>
+
+        <span class="food">
+          <div id="f1_container2" class="flip-container">
+              <div id="f1_card">
+                <div class="front face" onclick="clickFrontImage('#f1_container2')">
+                  <img src="./img/app/deviled-eggs.jpg">
+                  <div class="overlay">
+                    <span class="food_title"> Deviled Eggs w. Spiced Pecans & Sugar Cured Bacon </span>
+                      <a class="btn btn-success btn-med addFoodButton" onclick="clickAdd('#f1_container2')">
+                        <span>$8</span>
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                      </a>
+                  </div>
+                </div>
+                <div class="back face center" onclick="clickBackImage('#f1_container2')">
+                  <a class="btn btn-success btn-med addFoodButton">
+                    <span>$8</span>
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                      </a>
+                  <!--<span class="backtext">Lemon Blueberry Muffin or Sticky Bun </span>-->
+                  <div class="well" style=" background-color:yellow; color: black; font-size: 15px; height:100px; padding-top:5px">
+                      Shelled Hard-boiled eggs, cut in half, and filled with a paste made from the egg yolks with mayonnaise and mustard.
+                  </div>
+                  <table class="table" style="font-size:10px;color:black">
+                    <thead>
+                      <tr>
+                        <th>Calories</th>
+                        <th>Protien(g)</th>
+                        <th>Fat(g)</th>
+                        <th>Sodium(g)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>345</td>
+                        <td>10</td>
+                        <td>15</td>
+                        <td>890</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </span>
+
+         <span class="food">
+          <div id="f1_container3" class="flip-container">
+              <div id="f1_card">
+                <div class="front face" onclick="clickFrontImage('#f1_container3')">
+                  <img src="./img/app/calamari.jpeg">
+                  <div class="overlay">
+                    <span class="food_title"> Crispy Sweet & Sour Calamari </span>
+                      <a class="btn btn-success btn-med addFoodButton" onclick="clickAdd('#f1_container3')">
+                        <span>$11</span>
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                      </a>
+                  </div>
+                </div>
+                <div class="back face center" onclick="clickBackImage('#f1_container3')">
+                  <a class="btn btn-success btn-med addFoodButton">
+                    <span>$11</span>
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                      </a>
+                  <!--<span class="backtext">Lemon Blueberry Muffin or Sticky Bun </span>-->
+                  <div class="well" style=" background-color:yellow; color: black; font-size: 15px; height:100px;">
+                      Crispy Sweet & Sour Calamari, tossed with thin beans and pepper jelly.
+                  </div>
+                  <table class="table" style="font-size:10px;color:black">
+                    <thead>
+                      <tr>
+                        <th>Calories</th>
+                        <th>Protien(g)</th>
+                        <th>Fat(g)</th>
+                        <th>Sodium(g)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>345</td>
+                        <td>10</td>
+                        <td>15</td>
+                        <td>890</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </span>
+
+        <span class="food">
+          <div id="f1_container4" class="flip-container">
+              <div id="f1_card">
+                <div class="front face" onclick="clickFrontImage('#f1_container4')">
+                  <img src="./img/app/tuna-poke.jpg">
+                  <div class="overlay">
+                    <span class="food_title" style="left:50px"> Tuna Poke 2.0 </span>
+                      <a class="btn btn-success btn-med addFoodButton" onclick="clickAdd('#f1_container4')">
+                        <span>$11</span>
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                      </a>
+                  </div>
+                </div>
+                <div class="back face center" onclick="clickBackImage('#f1_container4')">
+                  <a class="btn btn-success btn-med addFoodButton">
+                    <span>$11</span>
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                      </a>
+                  <!--<span class="backtext">Lemon Blueberry Muffin or Sticky Bun </span>-->
+                  <div class="well" style=" background-color:yellow; color: black; font-size: 15px; height:100px; padding-top: 7px">
+                      Tuna Poke 2.0 made with ahi tuna , guacamole, ginger, cilantro & spicy mayo on crispy nori chips.
+                  </div>
+                  <table class="table" style="font-size:10px;color:black">
+                    <thead>
+                      <tr>
+                        <th>Calories</th>
+                        <th>Protien(g)</th>
+                        <th>Fat(g)</th>
+                        <th>Sodium(g)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>345</td>
+                        <td>10</td>
+                        <td>15</td>
+                        <td>890</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </span>
+
+        <span class="food">
+          <div id="f1_container5" class="flip-container">
+              <div id="f1_card">
+                <div class="front face" onclick="clickFrontImage('#f1_container5')">
+                  <img src="./img/app/artichoke-spinach-dip.jpg">
+                  <div class="overlay">
+                    <span class="food_title"> Hot Spinach, Parmesan & Artichoke Dip  </span>
+                      <a class="btn btn-success btn-med addFoodButton" onclick="clickAdd('#f1_container5')">
+                        <span>$10</span>
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                      </a>
+                  </div>
+                </div>
+                <div class="back face center" onclick="clickBackImage('#f1_container5')">
+                  <a class="btn btn-success btn-med addFoodButton">
+                    <span>$10</span>
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                      </a>
+                  <!--<span class="backtext">Lemon Blueberry Muffin or Sticky Bun </span>-->
+                  <div class="well" style=" background-color:yellow; color: black; font-size: 15px; height:100px;">
+                      Hot Spinach, Parmesan & Artichoke Dip with fresh tortilla chips.
+                  </div>
+                  <table class="table" style="font-size:10px;color:black">
+                    <thead>
+                      <tr>
+                        <th>Calories</th>
+                        <th>Protien(g)</th>
+                        <th>Fat(g)</th>
+                        <th>Sodium(g)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>345</td>
+                        <td>10</td>
+                        <td>15</td>
+                        <td>890</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </span>
+
+        <span class="food">
+          <div id="f1_container6" class="flip-container">
+              <div id="f1_card">
+                <div class="front face" onclick="clickFrontImage('#f1_container6')">
+                  <img src="./img/app/lobster-mac-cheese.jpg">
+                  <div class="overlay">
+                    <span class="food_title"> Lobster Mac 'N Cheese With Ham  </span>
+                      <a class="btn btn-success btn-med addFoodButton" onclick="clickAdd('#f1_container6')">
+                        <span>$14</span>
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                      </a>
+                  </div>
+                </div>
+                <div class="back face center" onclick="clickBackImage('#f1_container6')">
+                  <a class="btn btn-success btn-med addFoodButton">
+                    <span>$14</span>
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                      </a>
+                  <!--<span class="backtext">Lemon Blueberry Muffin or Sticky Bun </span>-->
+                  <div class="well" style=" background-color:yellow; color: black; font-size: 15px; height:100px; padding-top:7px">
+                      Cavatappi corkscrew pasta with lobster, pancetta and four cheeses, topped with toasted breadcrumbs.
+                  </div>
+                  <table class="table" style="font-size:10px;color:black">
+                    <thead>
+                      <tr>
+                        <th>Calories</th>
+                        <th>Protien(g)</th>
+                        <th>Fat(g)</th>
+                        <th>Sodium(g)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>345</td>
+                        <td>10</td>
+                        <td>15</td>
+                        <td>890</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </span>
+
+
+
+        <!--<span class="food">
         <a href="">
         <img src="./img/app/calamari.jpeg" alt="">
         </a>
-        </div>
-        <div class="food">
+        </span>
+
+        <span class="food">
         <a href="">
         <img src="./img/app/artichoke-spinach-dip-134.jpg" alt="">
         </a>
-        </div>
-        <div class="food">
+        </span>
+
+        <span class="food">
         <a href="">
         <img src="./img/app/crunchy-shrimp-sushi.jpg" alt="">
         </a>
-        </div>
-        <div class="food">
+        </span>
+
+        <span class="food">
         <a href="">
         <img src="./img/app/deviled-eggs.jpg" alt="">
         </a>
-        </div>
-        <div class="food">
+        </span>
+
+        <span class="food">
         <a href="">
         <img src="./img/app/firecracker-sushi.jpg" alt="">
         </a>
-        </div>
-        <div class="food">
+        </span>
+
+        <span class="food">
         <a href="">
         <img src="./img/app/Skillet-Macaroni-and-Cheese-1.jpg" alt="">
         </a>
-        </div>
-        <div class="food">
+        </span>
+
+        <span class="food">
         <a href="">
         <img src="./img/app/spicy-tuna-roll-sushi.jpg" alt="">
         </a>
-        </div>
+        </span>-->
       </div>
-      <br/>
       <div id="section2">
+        <!--<div class="food">
+        <a href="">
+        <img src="./img/app/buns.jpg" alt="">
+        </a>
+        </div>-->
 
       </div>
       <div id="section3">
-
+        <!--<div class="food">
+        <a href="">
+        <img src="./img/app/calamari.jpeg" alt="">
+        </a>
+        </div>-->
       </div>
       <div id="section4">
-
+        <!--<div class="food">
+        <a href="">
+        <img src="./img/app/calamari.jpeg" alt="">
+        </a>
+        </div>-->
       </div>
       <div id="section5">
-
+        <!--<div class="food">
+        <a href="">
+        <img src="./img/app/calamari.jpeg" alt="">
+        </a>
+        </div>-->
       </div>
     </div>
 
@@ -206,41 +505,56 @@
 
 </body>
 
-<script type="text/javascript">
+<script>
 
-$('.like-btn').on('click', function() {
-   $(this).toggleClass('is-active');
-});
+function clickFrontImage(id) {
+  var theContainer = document.querySelector(id);
+  theContainer.classList.add("rotateFlip");
+}
 
-$('.minus-btn').on('click', function(e) {
-    e.preventDefault();
-    var $this = $(this);
-    var $input = $this.closest('div').find('input');
-    var value = parseInt($input.val());
+function clickBackImage(id) {
+  var theContainer = document.querySelector(id);
+  theContainer.classList.remove("rotateFlip");
+}
 
-    if (value &gt; 1) {
-        value = value - 1;
-    } else {
-        value = 0;
-    }
+function clickAdd(id) {
+  // clickBackImage(id);
+  // alert('add clicked.')
+}
 
-  $input.val(value);
+// $('.like-btn').on('click', function() {
+//    $(this).toggleClass('is-active');
+// });
 
-});
+// $('.minus-btn').on('click', function(e) {
+//     e.preventDefault();
+//     var $this = $(this);
+//     var $input = $this.closest('div').find('input');
+//     var value = parseInt($input.val());
 
-$('.plus-btn').on('click', function(e) {
-    e.preventDefault();
-    var $this = $(this);
-    var $input = $this.closest('div').find('input');
-    var value = parseInt($input.val());
+//     if (value &gt; 1) {
+//         value = value - 1;
+//     } else {
+//         value = 0;
+//     }
 
-    if (value &lt; 100) {
-        value = value + 1;
-    } else {
-        value =100;
-    }
+//   $input.val(value);
 
-    $input.val(value);
-});
+// });
+
+// $('.plus-btn').on('click', function(e) {
+//     e.preventDefault();
+//     var $this = $(this);
+//     var $input = $this.closest('div').find('input');
+//     var value = parseInt($input.val());
+
+//     if (value &lt; 100) {
+//         value = value + 1;
+//     } else {
+//         value =100;
+//     }
+
+//     $input.val(value);
+// });
 
 </script>

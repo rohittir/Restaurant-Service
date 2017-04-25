@@ -1,0 +1,391 @@
+
+.bg,
+.overlay {
+  text-align: center;
+}
+
+img,
+.overlay {
+  transition: .3s all;
+}
+
+.bg {
+  float: left;
+  max-width: 31%;
+  position: relative;
+  margin: .5%;
+}
+.bg img {
+  max-width: 100%;
+  margin-bottom: -4px;
+  border-radius: 3px;
+}
+.bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  color: #1abf6a;
+  opacity: 0;
+}
+.bg .overlay h2 {
+  margin-top: 5%;
+  font-family: 'Droid Serif', serif;
+}
+.bg .overlay h2 span {
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: 700;
+}
+.bg .overlay p {
+  font-family: 'Julius Sans One', sans-serif;
+}
+.bg:hover .overlay {
+  opacity: 1;
+}
+.bg:hover img {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+@media screen and (max-width: 1148px) {
+  .bg {
+    max-width: 48%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bg {
+    float: none;
+    max-width: 60%;
+    margin: .5% auto;
+  }
+}
+
+.tableFont{
+    font-size: 0.8em;
+    color: white;
+
+}
+
+/*jackson restaurant*/
+body {
+  position: relative;
+}
+
+/*ul.nav-pills {
+  top: 20px;
+  position: fixed;
+}*/
+
+div.col-sm-7 div {
+  height: 280px;
+  font-size: 28px;
+}
+
+#section1 {
+  color: #fff;
+  /*background-color: #1E88E5;*/
+}
+
+#section2 {
+  color: #fff;
+  /*background-color: #673ab7;*/
+  /*position: relative;*/
+}
+
+#section3 {
+  color: #fff;
+  /*background-color: #ff9800;*/
+  /*position: relative;*/
+}
+
+#section4 {
+  color: #fff;
+  /*background-color: #00bcd4;*/
+  /*position: relative;*/
+}
+
+#section5 {
+  color: #fff;
+  /*background-color: #009688;*/
+  /*position: relative;*/
+}
+
+@media screen and (max-width: 810px) {
+  #section1, #section2, #section3, #section4, #section5 {
+    margin-left: 150px;
+  }
+}
+
+.affix {
+      top: 20px;
+  }
+
+/* Shopping Cart */
+.title {
+  height: 60px;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #5E6977;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.item {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+}
+
+.item:nth-child(3) {
+  border-top:  1px solid #E1E8EE;
+  border-bottom:  1px solid #E1E8EE;
+}
+
+buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+
+.like-btn {
+  display: inline-block;
+  Cursor: pointer;
+}
+.delete-btn {
+  padding-top: 10px;
+  margin-right: 10px;
+  /*width: 18px;
+  height: 17px;*/
+  /*background: url("./img/cart/delete-icn.svg") no-repeat center;*/
+}
+
+.like-btn {
+  position: absolute;
+  top: 9px;
+  left: 15px;
+  background: url('./img/cart/twitter-heart.png');
+  width: 60px;
+  height: 60px;
+  background-size: 2900%;
+  background-repeat: no-repeat;
+}
+
+.is-active {
+  animation-name: animate;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(28);
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+  0%   { background-position: left;  }
+  50%  { background-position: right; }
+  100% { background-position: right; }
+}
+
+.image {
+  margin-right: 5px;
+}
+
+/*Let’s add some basic style to  product name and description.*/
+.description {
+  padding-top: 30px;
+  margin-right: 10px;
+  width: 80px;
+}
+
+.description span {
+  display: block;
+  font-size: 14px;
+  color: #43484D;
+  font-weight: 400;
+}
+
+.description span:first-child {
+  margin-bottom: 5px;
+}
+.description span:last-child {
+  font-weight: 300;
+  /*margin-top: 8px;*/
+  color: #86939E;
+}
+
+.quantity {
+  /*padding-top: 5px;*/
+  margin-right: 10px;
+}
+.quantity input {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+button[class*=btn] {
+  width: 30px;
+  height: 30px;
+  background-color: #E1E8EE;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.minus-btn img {
+  margin-bottom: 3px;
+}
+.plus-btn img {
+  /*margin-top: 2px;*/
+}
+
+button:focus,
+input:focus {
+  outline:0;
+}
+.total-price {
+  width: 83px;
+  padding-top: 27px;
+  text-align: center;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+@media (max-width: 800px) {
+  .shopping-cart {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .item {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image img {
+    width: 50%;
+  }
+  .image,
+  .quantity,
+  .description {
+    width: 100%;
+    text-align: center;
+    /*margin: 6px 0;*/
+  }
+  .buttons {
+    margin-right: 20px;
+  }
+}
+/*Shopping Cart*/
+
+.food {
+  /*float: left;*/
+  /*max-width: 31%;*/
+  width: 280px;
+  height: 280px;
+  position: relative;
+  margin: .5%;
+  display: inline-block;
+  margin-top: 0;
+}
+
+.food_title {
+  position: absolute;
+  left: 10px;
+  top: 80px;
+  /*background: rgba(0, 0, 0, 0.2);*/
+  /*opacity: 0;*/
+  color: white;
+  font-size: 30px;
+  font-weight: 400;
+  font-weight: bold;
+  font-family: 'andada';
+}
+
+.addFoodButton {
+  position: relative;
+  /*left: 210px;*/
+  top: 220px;
+  /*background: green;
+  color: black;
+  font-size: 15px;*/
+}
+
+/* Flipping the image */
+.flip-container {
+  position: relative;
+  margin: auto;
+  width: 280px;
+  height: 280px;
+  z-index: 1;
+}
+.flip-container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+}
+
+/*#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}*/
+
+.rotateFlip #f1_card{
+  transform: rotateY(180deg);
+  /*box-shadow: -5px 5px 5px #aaa;*/
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+/*.face.front {
+  width: 280px;
+  height: 280px;
+}*/
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  /*color: white;*/
+  text-align: center;
+  background-color: white;
+  width: 280px;
+  height: 280px;
+}
+.face .overlay {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  /*bottom: 0;*/
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  opacity: 0;
+}
+.face:hover .overlay {
+  opacity: 1;
+}
+.face:hover img {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.backtext {
+  color: black;
+  font-family: 'Droid Serif', serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+/*Flipping the image*/
