@@ -1,4 +1,18 @@
 
+
+/*Fonts*/
+
+@font-face {
+    font-family: 'Alcubierre';
+    src: url("../fonts/Alcubierre.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Corbert-Regular';
+    src: url("../fonts/Corbert-Regular.otf") format("opentype");
+}
+
+
 .bg,
 .overlay {
   text-align: center;
@@ -78,7 +92,7 @@ body {
   position: fixed;
 }*/
 
-div.col-sm-7 div {
+div.col-sm-7 {
   height: 280px;
   font-size: 28px;
 }
@@ -112,8 +126,12 @@ div.col-sm-7 div {
   /*position: relative;*/
 }
 
+#section6 {
+    color: #fff;
+}
+
 @media screen and (max-width: 810px) {
-  #section1, #section2, #section3, #section4, #section5 {
+  #section1, #section2, #section3, #section4, #section5, #section6 {
     margin-left: 150px;
   }
 }
@@ -121,166 +139,6 @@ div.col-sm-7 div {
 .affix {
       top: 20px;
   }
-
-/* Shopping Cart */
-.title {
-  height: 60px;
-  border-bottom: 1px solid #E1E8EE;
-  padding: 20px 30px;
-  color: #5E6977;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.item {
-  padding: 20px 30px;
-  height: 120px;
-  display: flex;
-}
-
-.item:nth-child(3) {
-  border-top:  1px solid #E1E8EE;
-  border-bottom:  1px solid #E1E8EE;
-}
-
-buttons {
-  position: relative;
-  padding-top: 30px;
-  margin-right: 60px;
-}
-
-.like-btn {
-  display: inline-block;
-  Cursor: pointer;
-}
-.delete-btn {
-  padding-top: 10px;
-  margin-right: 10px;
-  /*width: 18px;
-  height: 17px;*/
-  /*background: url("./img/cart/delete-icn.svg") no-repeat center;*/
-}
-
-.like-btn {
-  position: absolute;
-  top: 9px;
-  left: 15px;
-  background: url('./img/cart/twitter-heart.png');
-  width: 60px;
-  height: 60px;
-  background-size: 2900%;
-  background-repeat: no-repeat;
-}
-
-.is-active {
-  animation-name: animate;
-  animation-duration: .8s;
-  animation-iteration-count: 1;
-  animation-timing-function: steps(28);
-  animation-fill-mode: forwards;
-}
-
-@keyframes animate {
-  0%   { background-position: left;  }
-  50%  { background-position: right; }
-  100% { background-position: right; }
-}
-
-.image {
-  margin-right: 5px;
-}
-
-/*Let’s add some basic style to  product name and description.*/
-.description {
-  padding-top: 30px;
-  margin-right: 10px;
-  width: 80px;
-}
-
-.description span {
-  display: block;
-  font-size: 14px;
-  color: #43484D;
-  font-weight: 400;
-}
-
-.description span:first-child {
-  margin-bottom: 5px;
-}
-.description span:last-child {
-  font-weight: 300;
-  /*margin-top: 8px;*/
-  color: #86939E;
-}
-
-.quantity {
-  /*padding-top: 5px;*/
-  margin-right: 10px;
-}
-.quantity input {
-  -webkit-appearance: none;
-  border: none;
-  text-align: center;
-  width: 32px;
-  font-size: 16px;
-  color: #43484D;
-  font-weight: 300;
-}
-
-button[class*=btn] {
-  width: 30px;
-  height: 30px;
-  background-color: #E1E8EE;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-.minus-btn img {
-  margin-bottom: 3px;
-}
-.plus-btn img {
-  /*margin-top: 2px;*/
-}
-
-button:focus,
-input:focus {
-  outline:0;
-}
-.total-price {
-  width: 83px;
-  padding-top: 27px;
-  text-align: center;
-  font-size: 16px;
-  color: #43484D;
-  font-weight: 300;
-}
-
-@media (max-width: 800px) {
-  .shopping-cart {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-  }
-  .item {
-    height: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .image img {
-    width: 50%;
-  }
-  .image,
-  .quantity,
-  .description {
-    width: 100%;
-    text-align: center;
-    /*margin: 6px 0;*/
-  }
-  .buttons {
-    margin-right: 20px;
-  }
-}
-/*Shopping Cart*/
 
 .food {
   /*float: left;*/
@@ -303,7 +161,7 @@ input:focus {
   font-size: 30px;
   font-weight: 400;
   font-weight: bold;
-  font-family: 'andada';
+  font-family: 'Alcubierre';
 }
 
 .addFoodButton {
@@ -368,6 +226,7 @@ input:focus {
   position: absolute;
   top: 0px;
   left: 0;
+  height: 280px;
   /*bottom: 0;*/
   width: 100%;
   background: rgba(0, 0, 0, 0.2);
@@ -383,9 +242,50 @@ input:focus {
 }
 
 .backtext {
+  font-family:'Corbert-Regular';
+  background-color:yellow;
   color: black;
-  font-family: 'Droid Serif', serif;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
+  height:100px;
 }
-/*Flipping the image*/
+
+.backTable {
+    font-family:'Corbert-Regular';
+    font-size:12px;
+    color:black;
+    font-weight: bold;
+}
+
+.ratingText {
+    position:absolute;
+     left:210px;
+     top:10px;
+}
+/*Ends -- Flipping the image*/
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+/*
+.food-cart-icon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    display: block;
+}
+
+.food-cart-icon.icon-home {
+    background: url(img/app/cart-icon.jpg);
+    background-size: cover;
+}
+
+.food-cart-icon.normal {
+    width: 32px;
+    height: 32px;
+}*/
