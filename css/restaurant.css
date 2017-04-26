@@ -12,6 +12,10 @@
     src: url("../fonts/Corbert-Regular.otf") format("opentype");
 }
 
+@font-face {
+    font-family: 'FjordOne-Regular';
+    src: url("../fonts/FjordOne-Regular.otf") format("opentype");
+}
 
 .bg,
 .overlay {
@@ -242,16 +246,17 @@ div.col-sm-7 {
 }
 
 .backtext {
-  font-family:'Corbert-Regular';
+  font-family:'FjordOne-Regular';
   background-color:yellow;
   color: black;
   font-size: 15px;
   font-weight: bold;
   height:100px;
+  margin-top: -20px;
 }
 
 .backTable {
-    font-family:'Corbert-Regular';
+    font-family:'FjordOne-Regular';
     font-size:12px;
     color:black;
     font-weight: bold;
@@ -267,6 +272,10 @@ div.col-sm-7 {
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     opacity: 1;
+}
+
+.hide_element {
+  display: none;
 }
 
 /*
