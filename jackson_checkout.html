@@ -185,22 +185,22 @@ var x = setInterval(function() {
                 </tbody>
             </table>
 
-            <a href="jackson_rest.html"> Add more food items </a>
+            <a href="jackson_rest.html"> Order more food </a>
             </div>
         </div>
         </div>
 
         <div class="col-sm-4">
-            <div class="panel panel-info" style="margin-left:10px;">
+            <div class="panel panel-info" style="margin-left:10px;height:345px">
                 <div class="panel-heading">
                     <div class="panel-title">
-                        <h5 style="font-size: 15px"> Preparing your food... </h5>
+                        <h5 id="orderheading" style="font-size: 15px"> Preparing your food... </h5>
                     </div>
                 </div>
                 <div class="panel-body" style="overflow-y: auto">
                     <div class="row">
                         <div class="col-sm-3">
-                            <div class="item html" style="font-family:'Lato-Bold'; margin-left:70px; margin-top: 10px;">
+                            <div class="item html" style="font-family:'Lato-Bold'; margin-left:70px; margin-top: 40px;">
                             <h2>0:0</h2>
                             <svg width="160" height="160" xmlns="http://www.w3.org/2000/svg">
                             <g>
@@ -229,7 +229,7 @@ var x = setInterval(function() {
                 <div class="panel-body">
                     <ul class="chat" id="chat-panel">
                         <li class="left clearfix"><span class="chat-img pull-left">
-                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                            <img src="./img/gordonramsay-chat.jpg" alt="User Avatar" class="img-circle" />
                             </span>
                             <div class="chat-body clearfix">
                                 <div class="header">
@@ -237,10 +237,10 @@ var x = setInterval(function() {
                                         <span class="glyphicon glyphicon-time"></span>Just Now</small>
                                 </div>
                                 <p id="question1">
-                                    Good evening, Sir! I Hope you are enjoying our service. We have recieved your order and it will be served shortly. You can check the status of your order displayed on the left.
+                                    Good evening, Sir! My name is Gordon Ramsay. I am your head chef today. I hope you are enjoying our services.
                                 </p>
                                 <p>
-                                    Do you have any preferences on your recent order, Sir?
+                                    Do you have any food allergies or customizations on your recent order, Sir?
                                 </p>
                             </div>
                         </li>
@@ -258,7 +258,7 @@ var x = setInterval(function() {
                             </div>
                         </li>
                         <li class="left clearfix" style="display:none;" id="question2_head"><span class="chat-img pull-left" >
-                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                            <img src="./img/gordonramsay-chat.jpg" alt="User Avatar" class="img-circle" />
                         </span>
                             <div class="chat-body clearfix">
                                 <div class="header">
@@ -266,8 +266,8 @@ var x = setInterval(function() {
                                         <span class="glyphicon glyphicon-time"></span>Just Now</small>
                                 </div>
                                 <p id = "question2">
-                                    Sure, Sir. Thank you for letting us know. We will take care of this while preparing your food.
-                                    Anything else that we can help you with, Sir?
+                                    Sure, Sir. I will take care of this while preparing your food.
+                                    Anything else that you would like me to know about your food, Sir?
                                 </p>
                             </div>
                         </li>
@@ -285,7 +285,7 @@ var x = setInterval(function() {
                             </div>
                         </li>
                         <li class="left clearfix" style="display:none;" id="question3_head"><span class="chat-img pull-left">
-                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                            <img src="./img/gordonramsay-chat.jpg" alt="User Avatar" class="img-circle" />
                         </span>
                             <div class="chat-body clearfix">
                                 <div class="header">
@@ -293,8 +293,13 @@ var x = setInterval(function() {
                                         <span class="glyphicon glyphicon-time"></span>Just Now</small>
                                 </div>
                                 <p id="question3">
-                                    My pleasure, Sir. Please wait for your order and let us know if you have any questions.
-                                    Enjoy the evening, Sir!
+                                    My pleasure, Sir. Please wait for your order and let us know if you have any further questions. Our representative will instantly reply you.
+                                </p>
+                                <p>
+                                    You can check the status of your order on the left.
+                                </p>
+                                <p>
+                                     Enjoy the evening, Sir!
                                 </p>
 
                             </div>
@@ -356,13 +361,47 @@ var time = 600; /* how long the timer runs for */
 var initialOffset = '880';
 var i = time;
 var interval = setInterval(function() {
-    $('.circle_animation').css('stroke-dashoffset', initialOffset-((time-i)*(initialOffset/time)));
+    $('.circle_animation').css('stroke-dashoffset', ((time-i)*(initialOffset/time)));
     let min = Math.floor(i/60);
     // alert(min);
     let sec = Math.floor(i - (60*min));
-    $('h2').text(min + ':' + sec);
+    let min1 = '';
+    let sec1 = '';
+    if(min < 10) {
+        min1 = '0'+min;
+    } else {
+        min1 = min;
+    }
+    if(sec < 10) {
+        sec1 = '0'+sec;
+    } else {
+        sec1 = sec;
+    }
+
+    $('h2').text(min1 + ':' + sec1);
     if (i <= 0) {
         clearInterval(interval);
+    }
+    if (i == 595){
+        document.getElementById('orderheading').innerHTML = 'Your drinks will be served next...';
+    }
+    if (i == 591){
+        document.getElementById('orderheading').innerHTML = 'Preparing your Drinks...';
+    }
+    if (i == 580){
+        document.getElementById('orderheading').innerHTML = "Your Drinks are ready and being served...";
+    }
+    if (i == 575){
+        document.getElementById('orderheading').innerHTML = "Your starters will be served next...";
+    }
+    if (i == 571){
+        document.getElementById('orderheading').innerHTML = "Preparing your Starters...";
+    }
+    if (i == 550){
+        document.getElementById('orderheading').innerHTML = "Your Starters are ready and being served...";
+    }
+    if (i == 540){
+        document.getElementById('orderheading').innerHTML = "Preparing your remaining food...";
     }
     i--;
 }, 1000);
