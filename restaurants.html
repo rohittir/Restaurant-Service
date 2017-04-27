@@ -14,6 +14,8 @@
     <link href="css/bootstrap-social.css" rel="stylesheet">
     <link href="css/mystyles.css" rel="stylesheet">
     <link href="css/restaurant.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 
@@ -35,11 +37,42 @@
                     <li><a href="aboutus.html"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a></li>
                     <li><a href="contactus.html"><span class="fa fa-envelope-o"></span> Contact </a></li>
                 </ul>
-                <span class="pull-right img-circle" style=" margin-top:15px;" alt="User Avatar"><a style="color:white; font-size:15px;" id="intel-issue-user-menu-user" ><span class="glyphicon glyphicon-user"></span> David S. Robert</a></span>
+                <span class="popper pull-right" data-toggle="popover" style="cursor:pointer; position:absolute; left: 1100px; top: 8px;">
+                    <a style="color:white; font-size:15px;" >
+                        <span class="chat-img">
+                           <img src="./img/app/david_pic.jpg" alt="User Avatar" class="img-circle" />
+                        </span>
+                        David S. Robert
+                    </a>
+                </span>
+
+                <div class="list-group popper-content hide">
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-user"></span> Profile </a>
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-time"></span> Order History</a>
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-cog"></span> Settings</a>
+                    <a href="./index.html" class="list-group-item"><span class="glyphicon glyphicon-off"></span> Log Out </a>
+              </div>
+
                 <!-- Trial form from here -->
             </div>
         </div>
     </nav>
+
+<!--popover-->
+    <!--<button class="popper" data-toggle="popover">Pop me</button>-->
+    <!--<div></div>-->
+
+
+    <script>
+        $('.popper').popover({
+        placement: 'bottom',
+        container: 'body',
+        html: true,
+        content: function () {
+            return $(this).next('.popper-content').html();
+        }
+    });
+    </script>
 
 
 
@@ -47,7 +80,7 @@
     <div class="container">
             <div class="row row-header">
                 <div class="col-xs-12 col-sm-9">
-                    <h1 style="color: black;">My Service</h1>
+                    <h1 style="color: black;">Mason Restorante</h1>
                 </div>
             </div>
         </div>
@@ -226,6 +259,8 @@ function onImageOver(x) {
 
 </script>
 
+<br/>
+<br/>
 <footer class="row-footer">
         <div class="container">
             <div class="row">

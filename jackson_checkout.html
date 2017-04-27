@@ -37,9 +37,34 @@
                 <li class="breadcrumb-item active"> Order Status </li>
                 <span style="font-family: 'Lato-Bold'; color: blue; font-weight:bold; margin-left:50px"><span>Your Booking : Thursday, April 27th, 9.00 PM.</span>
                 <span style="margin-left:20px; font-family:'Lato-Bold'"> Table No.: A03 </span></span>
-                <span class="pull-right" style="position:absolute; left: 1200px; top: 20px;"><a style="color:white; font-size:15px;" ><span class="glyphicon glyphicon-user"></span> David S. Robert</a></span>
+                <span class="popper pull-right" data-toggle="popover" style="cursor:pointer; position:absolute; left: 1100px; top: 10px;">
+                    <a style="color:white; font-size:15px;" >
+                        <span class="chat-img">
+                           <img src="./img/app/david_pic.jpg" alt="User Avatar" class="img-circle" />
+                        </span>
+                        David S. Robert
+                    </a>
+                </span>
+
+              <div class="list-group popper-content hide">
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-user"></span> Profile </a>
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-time"></span> Order History</a>
+                    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-cog"></span> Settings</a>
+                    <a href="./index.html" class="list-group-item"><span class="glyphicon glyphicon-off"></span> Log Out </a>
+              </div>
         </ol>
 </div>
+
+<script>
+        $('.popper').popover({
+        placement: 'bottom',
+        container: 'body',
+        html: true,
+        content: function () {
+            return $(this).next('.popper-content').html();
+        }
+    });
+</script>
 
 <body>
 
@@ -96,7 +121,7 @@ var x = setInterval(function() {
         <div class="panel panel-info" style="width: 370px;">
 		    <div class="panel-heading">
 			    <div class="panel-title">
-                <div><h5><span class="glyphicon glyphicon-shopping-cart"></span> Order Details </h5></div>
+                <div><h5><img src="./img/app/food-cart-icon.png" ></span> Order Details </h5></div>
 					</div>
             </div>
             <div class="panel-body" style="height: 420px; overflow-y: auto">
@@ -194,7 +219,7 @@ var x = setInterval(function() {
             <div class="panel panel-info" style="margin-left:10px;height:345px">
                 <div class="panel-heading">
                     <div class="panel-title">
-                        <h5 id="orderheading" style="font-size: 15px"> Preparing your food... </h5>
+                        <h5 style="font-size: 15px"><span class="glyphicon glyphicon-time"> </span><span id="orderheading"> Preparing your food... </span></h5>
                     </div>
                 </div>
                 <div class="panel-body" style="overflow-y: auto">
@@ -245,7 +270,7 @@ var x = setInterval(function() {
                             </div>
                         </li>
                         <li class="right clearfix" id="reply1_head" style="display:none;"><span class="chat-img pull-right">
-                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                            <img src="./img/app/david_pic.jpg" alt="User Avatar" class="img-circle" />
                         </span>
                             <div class="chat-body clearfix">
                                 <div class="header">
@@ -272,7 +297,7 @@ var x = setInterval(function() {
                             </div>
                         </li>
                         <li class="right clearfix" style="display:none;" id="reply2_head"><span class="chat-img pull-right">
-                            <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                            <img src="./img/app/david_pic.jpg" alt="User Avatar" class="img-circle" />
                         </span>
                             <div class="chat-body clearfix">
                                 <div class="header">
@@ -383,25 +408,25 @@ var interval = setInterval(function() {
         clearInterval(interval);
     }
     if (i == 595){
-        document.getElementById('orderheading').innerHTML = 'Your drinks will be served next...';
+        document.getElementById('orderheading').innerHTML = ' Your drinks will be served next...';
     }
     if (i == 591){
-        document.getElementById('orderheading').innerHTML = 'Preparing your Drinks...';
+        document.getElementById('orderheading').innerHTML = ' Preparing your Drinks...';
     }
     if (i == 580){
-        document.getElementById('orderheading').innerHTML = "Your Drinks are ready and being served...";
+        document.getElementById('orderheading').innerHTML = " Your Drinks are ready and being served...";
     }
     if (i == 575){
-        document.getElementById('orderheading').innerHTML = "Your starters will be served next...";
+        document.getElementById('orderheading').innerHTML = " Your starters will be served next...";
     }
     if (i == 571){
-        document.getElementById('orderheading').innerHTML = "Preparing your Starters...";
+        document.getElementById('orderheading').innerHTML = " Preparing your Starters...";
     }
     if (i == 550){
-        document.getElementById('orderheading').innerHTML = "Your Starters are ready and being served...";
+        document.getElementById('orderheading').innerHTML = " Your Starters are ready and being served...";
     }
     if (i == 540){
-        document.getElementById('orderheading').innerHTML = "Preparing your remaining food...";
+        document.getElementById('orderheading').innerHTML = " Preparing your remaining food...";
     }
     i--;
 }, 1000);
