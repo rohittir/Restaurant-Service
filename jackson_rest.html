@@ -19,21 +19,6 @@
 
 </head>
 
-<!--<div class="container-fluid" style="background-color:#2196F3;color:#fff;height:200px;">
-  <h1>Bootstrap Affix Example</h1>
-  <h3>Fixed (sticky) vertical sidenav on scroll</h3>
-  <p>Scroll this page to see how the left navigation menu behaves with data-spy="affix".</p>
-  <p><strong>The left menu sticks to the page when you have scrolled a specified amount of pixels.</strong></p>
-</div>
-<br/>-->
-
-<!--<nav class="navbar navbar-inverse" style="margin-top:-50px">
-  <ul class="nav navbar-nav">
-   <li><a href="home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
-   <li class="active"><a href="restaurants.html"> Restaurants </a></li>
-  </ul>
-</nav>-->
-
 <header class="jumbotron" style="background-image: url(img/app/jackson_rest_banner.jpg); background-size:cover; height:250px; margin-top:-50px">
     <div class="container">
             <div class="row row-header">
@@ -41,6 +26,7 @@
                     <h1 style="font-family: 'Alcubierre'; color: green; font-weight:bold"></h1>
                 </div>
             </div>
+            <span class="pull-right" style="position:absolute; left: 1200px; top: 20px;"><a style="color:white; font-size:15px;" ><span class="glyphicon glyphicon-user"></span> David S. Robert</a></span>
         </div>
     </header>
 
@@ -49,8 +35,9 @@
                 <li class="breadcrumb-item"><a href="home.html">Home</a></li>
                 <li class="breadcrumb-item"><a href="restaurants.html">Restaurants</a></li>
                 <li class="breadcrumb-item active">Jackson's Mighty Fine Food</li>
-                <span style="font-family: 'FjordOne-Regular'; color: blue; font-weight:bold; margin-left:50px"><span>Your Booking : Thursday, April 27th, 9.00 PM.</span>
+                <span style="font-family: 'Lato-Bold'; color: blue; font-weight:bold; margin-left:50px"><span>Your Booking : Thursday, April 27th, 9.00 PM.</span>
                 <span style="margin-left:20px;"> Table No.: A03 </span></span>
+
         </ol>
 </div>
 
@@ -1269,7 +1256,7 @@
       	<div class="panel panel-info" style="width: 300px"data-spy="affix" data-offset-top="205">
 				<div class="panel-heading">
 					<div class="panel-title">
-            <div><h5><span class="glyphicon glyphicon-shopping-cart"></span> Food Cart</h5></div>
+            <div><h5><span class="glyphicon glyphicon-shopping-cart"></span> Order Details </h5></div>
 					</div>
         </div>
         <div class="panel-body">
@@ -1361,44 +1348,15 @@
             <tbody>
               <tr>
                 <td></td>
-                <td><strong>Total Calories:</strong></td>
+                <td><strong>Calories:</strong></td>
                 <td ><strong id="calories_cart">0</strong></td>
                 <td></td>
               </tr>
             </tbody>
         </table>
 
-        <button type="button" class="btn btn-success btn-block">
-								<span>Checkout</span></button>
-
-
-          <!--<div>
-            <div style="display: inline-block;">
-            <button class="btn btn-link btn-sm" >
-              <span class="glyphicon glyphicon-trash"></span></button>
-            </div>
-            <div style="display:inline-block;margin-left:5px;">
-                <span><strong>Best Buns...</strong></span>
-            </div>
-            <div style="display:inline-block;width:40px; margin-left:15px;">
-              <input type="text" class="form-control input-sm" value="1">
-            </div>
-            <span style="display: inline-block;margin-left:30px;"> $2 </span>
-          </div>-->
-
-          <!--<div style="margin-top: 15px">
-            <div style="display: inline-block;">
-            <button class="btn btn-link btn-sm" >
-              <span class="glyphicon glyphicon-trash"></span></button>
-            </div>
-            <div style="display:inline-block;margin-left:5px;">
-                <span><strong>Deviled Eggs...</strong></span>
-            </div>
-            <div style="display:inline-block;width:40px; margin-left:15px;">
-              <input type="text" class="form-control input-sm" value="1">
-            </div>
-            <span style="display: inline-block;margin-left:20px;"> $8 </span>
-          </div>-->
+        <button type="button" class="btn btn-success btn-block" onclick="location.href='./jackson_checkout.html';">
+				<span>Confirm Order</span></button>
 
       	</div>
     </div>
